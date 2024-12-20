@@ -38,7 +38,7 @@
         </div>
 
         <div class="flex flex-col w-full px-6 my-2 h-[4.25rem]">
-          <label for="additional-contribuition" class="font-bold text-gray-700"
+          <label for="additional-contribution" class="font-bold text-gray-700"
             >Additional Contributions</label
           >
           <div class="flex">
@@ -50,10 +50,11 @@
             />
             <input
               type="text"
+              required
               placeholder="0.00"
               class="w-5/6 px-2 rounded-r-lg"
-              id="additional-contribuition"
-              name="additional-contribuition"
+              id="additional-contribution"
+              name="additional-contribution"
             />
           </div>
         </div>
@@ -149,8 +150,17 @@
         </button>
       </div>
     </aside>
-    <main>
-      <p>results</p>
+    <main class="h-full">
+      <section id="charts-container">
+        <div class="h-[36dvh]">
+          <p>Final Result</p>
+          <canvas id="final-money-distribution"></canvas>
+        </div>
+        <div class="h-[56dvh]">
+          <p>Progression</p>
+          <canvas id="progression"></canvas>
+        </div>
+      </section>
     </main>
     <script type="module" src="./main.js"></script>
   </body>
